@@ -62,7 +62,7 @@ const Navbar = () => {
 						</Button>
 					</nav>
 					<div className="w-2/5 h-full flex justify-end items-center gap-5 pr-5">
-						<Button className="bg-gradient py-5 px-7 text-white rounded-3xl hover:-translate-y-1 duration-1000" variant="secondary">
+						<Button className="bg-gradient-blue py-5 px-7 text-white rounded-3xl hover:-translate-y-1 duration-1000" variant="secondary">
 							Book Appointment
 						</Button>
 						<div className="h-10 w-10 border rounded-full flex justify-center items-center cursor-pointer hover:bg-[#04ce78] duration-500">
