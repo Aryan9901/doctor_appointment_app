@@ -91,3 +91,7 @@
 .bg-gradient-green {
 	background-image: linear-gradient(to bottom, #04ce78 20%, #04ce7643);
 }
+
+.box-shadow {
+	box-shadow: 0 0 2px #5c5c5c9f;
+}
