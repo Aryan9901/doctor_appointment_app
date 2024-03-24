@@ -108,7 +108,7 @@ const Accordion = ({ img, heading, paragraph, list, opened = false, idx, setIsOp
 	// setIsOpened(idx);
 
 	return (
-		<div
+		<section
 			onClick={() => setIsOpened(idx)}
 			className={` cursor-pointer rounded-2xl transition-opacity duration-700 box-shadow ${
 				opened ? "w-[40%] min-h-[23rem]" : "w-[20%] min-h-[23rem]"
@@ -140,6 +140,6 @@ const Accordion = ({ img, heading, paragraph, list, opened = false, idx, setIsOp
 					})}
 				</ul>
 			</div>
-		</div>
+		</section>
 	);
 };
