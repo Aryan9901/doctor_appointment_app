@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import About from "../components/elements/About";
 import HomeServices from "../components/elements/HomeServices";
 import { Button } from "../components/ui/button";
 
@@ -81,6 +82,7 @@ const Home = () => {
 				<Feature imgpath="/feature_box_4.svg" heading="24/7 Advance Care" para="We understand that every patient is unique" />
 			</section>
 			<HomeServices />
+			<About />
 		</main>
 	);
 };
