@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import About from "../components/elements/About";
+import ChooseUs from "../components/elements/ChooseUs";
 import HomeServices from "../components/elements/HomeServices";
 import { Button } from "../components/ui/button";
 
@@ -83,6 +84,7 @@ const Home = () => {
 			</section>
 			<HomeServices />
 			<About />
+			<ChooseUs />
 		</main>
 	);
 };
