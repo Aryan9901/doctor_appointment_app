@@ -82,7 +82,7 @@
 }
 
 .clip-custom {
-	clip-path: polygon(100% 0%, 100% 55%, 79% 99%, 0 100%, 0 0);
+	clip-path: polygon(100% 0%, 100% 55%, 79% 100%, 0 100%, 0 0);
 }
 
 .bg-gradient-blue {

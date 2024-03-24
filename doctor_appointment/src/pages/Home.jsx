@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import HomeServices from "../components/elements/HomeServices";
 import { Button } from "../components/ui/button";
 
 const Home = () => {
@@ -41,39 +43,58 @@ const Home = () => {
 					<form className="flex flex-wrap items-center justify-around w-[75%] gap-4">
 						<input
 							type="text"
-							className="py-3 px-8 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-200 text-sm"
+							className="py-3 w-56 px-5 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-100 text-sm"
 							placeholder="Your Name"
 						/>
 						<input
 							type="text"
-							className="py-3 px-8 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-200 text-sm"
+							className="py-3 w-56 px-5 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-100 text-sm"
+							placeholder="Email Address"
+						/>
+						<input
+							type="text"
+							className="py-3 w-56 px-5 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-100 text-sm"
+							placeholder="Phone Number"
+						/>
+						<input
+							type="date"
+							className="py-3 px-5 w-56 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-100 text-sm"
+							placeholder="23-04-2024"
+						/>
+						<input
+							type="text"
+							className="py-3 w-56 px-5 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-100 text-sm"
 							placeholder="Your Name"
 						/>
 						<input
 							type="text"
-							className="py-3 px-8 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-200 text-sm"
-							placeholder="Your Name"
-						/>
-						<input
-							type="text"
-							className="py-3 px-8 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-200 text-sm"
-							placeholder="Your Name"
-						/>
-						<input
-							type="text"
-							className="py-3 px-8 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-200 text-sm"
-							placeholder="Your Name"
-						/>
-						<input
-							type="text"
-							className="py-3 px-8 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-200 text-sm"
+							className="py-3 w-56 px-5 outline-none focus:shadow-md border-[#000] rounded-3xl bg-slate-100 text-sm"
 							placeholder="Your Name"
 						/>
 					</form>
 				</div>
 			</section>
+			<section className="feature h-48 px-9 flex flex-wrap items-center justify-around border-b ">
+				<Feature imgpath="/feature_box_1.svg" heading="Experienced Doctors" para="Our team of skilled doctors, nurses, and specialists" />
+				<Feature imgpath="/feature_box_2.svg" heading="Painless Treatment" para="Your health and well-being are our top priorities." />
+				<Feature imgpath="/feature_box_3.svg" heading="Top Dental Equipment" para="Our clinic is equipped with modern facilities" />
+				<Feature imgpath="/feature_box_4.svg" heading="24/7 Advance Care" para="We understand that every patient is unique" />
+			</section>
+			<HomeServices />
 		</main>
 	);
 };
 
 export default Home;
+
+const Feature = ({ imgpath, heading, para }) => {
+	return (
+		<div className="flex min-w-52 w-[20%] items-center justify-end gap-2">
+			<img src={imgpath} className="w-[19%]" alt={heading} />
+			<div>
+				<h3 className="text-md font-bold">{heading}</h3>
+				<article className="text-[.8rem] leading-4 text-slate-800 font-normal opacity-75 w-[90%] text-balance">{para}</article>
+			</div>
+		</div>
+	);
+};
