@@ -85,6 +85,7 @@ const Home = () => {
 			<HomeServices />
 			<About />
 			<ChooseUs />
+			<section></section>
 		</main>
 	);
 };

@@ -56,15 +56,15 @@ const SelectedTab = ({ value, img }) => {
 					<div className="flex items-center justify-center gap-4 mt-5">
 						<div className="flex flex-col items-start bg-[#F5F7FA] justify-start py-2 pl-4 pr-2 box-shadow gap-2 rounded-xl">
 							<h3 className="font-semibold mt-2">Intensive Start</h3>
-							<p className="text-sm leading-6 mt-1 mb-3">
+							<article className="text-sm leading-6 mt-1 mb-3">
 								Specialized dental care for children. Give patients an estimate the average wait time for scheduled appointments.
-							</p>
+							</article>
 						</div>
 						<div className="flex flex-col items-start bg-[#F5F7FA] justify-start py-2 pl-4 pr-2 box-shadow gap-2 rounded-xl">
 							<h3 className="font-semibold mt-2">Intensive Start</h3>
-							<p className="text-sm leading-6 mt-1 mb-3">
+							<article className="text-sm leading-6 mt-1 mb-3">
 								Specialized dental care for children. Give patients an estimate the average wait time for scheduled appointments.
-							</p>
+							</article>
 						</div>
 					</div>
 				)}
