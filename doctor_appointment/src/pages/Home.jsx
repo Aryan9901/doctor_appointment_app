@@ -3,6 +3,7 @@ import About from "../components/elements/About";
 import ChooseUs from "../components/elements/ChooseUs";
 import HomeServices from "../components/elements/HomeServices";
 import { Button } from "../components/ui/button";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
 	return (
@@ -85,7 +86,34 @@ const Home = () => {
 			<HomeServices />
 			<About />
 			<ChooseUs />
-			<section></section>
+			<section className="w-full h-32 bg-[#1F5FFF]  flex items-center justify-center">
+				<Marquee>
+					<div className="mr-32">
+						<img src="/brand_2_1.svg" alt="brand logo 1" />
+					</div>
+					<div className="mr-32">
+						<img src="/brand_2_2.svg" alt="brand logo 1" />
+					</div>
+					<div className="mr-32">
+						<img src="/brand_2_3.svg" alt="brand logo 1" />
+					</div>
+					<div className="mr-32">
+						<img src="/brand_2_4.svg" alt="brand logo 1" />
+					</div>
+					<div className="mr-32">
+						<img src="/brand_2_5.svg" alt="brand logo 1" />
+					</div>
+					<div className="mr-32">
+						<img src="/brand_2_6.svg" alt="brand logo 1" />
+					</div>
+					<div className="mr-32">
+						<img src="/brand_2_7.svg" alt="brand logo 1" />
+					</div>
+					<div className="mr-32">
+						<img src="/brand_2_8.svg" alt="brand logo 1" />
+					</div>
+				</Marquee>
+			</section>
 		</main>
 	);
 };
