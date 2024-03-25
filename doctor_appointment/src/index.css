@@ -95,3 +95,10 @@
 .box-shadow {
 	box-shadow: 0 0 2px #5c5c5c9f;
 }
+
+.photo-item {
+	transition: all 5s;
+}
+.photo-item:hover > div {
+	opacity: 1;
+}
