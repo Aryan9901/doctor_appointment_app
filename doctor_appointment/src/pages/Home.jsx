@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
+import { FaPlus } from "react-icons/fa";
 import About from "../components/elements/About";
 import ChooseUs from "../components/elements/ChooseUs";
 import HomeServices from "../components/elements/HomeServices";
 import { Button } from "../components/ui/button";
 import Marquee from "react-fast-marquee";
+import Team from "../components/elements/Team";
 
 const Home = () => {
 	return (
@@ -114,6 +116,81 @@ const Home = () => {
 					</div>
 				</Marquee>
 			</section>
+			<section className="w-full ">
+				<div className="photo-gallery w-full flex items-start justify-start flex-wrap">
+					<div className="photo-item min-w-[300px] relative w-2/6 h-80">
+						<div className="absolute opacity-0 h-full w-full p-5 bg-[#131a47cb]">
+							<div className="h-full w-full border-2 flex flex-col items-center justify-center">
+								<div className="h-12 w-12 rounded-full flex items-center justify-center bg-[#04ce78] hover:bg-[#1F5FFF]">
+									<FaPlus className="text-white font-regular text-xl" />
+								</div>
+								<h3 className="text-white text-xl font-bold my-3">Dental Cleaning</h3>
+								<p className="w-2/3 text-sm text-white text-center">
+									Thorough oral examinations to assess the overall health of teeth, gums, and surrounding structures.
+								</p>
+							</div>
+						</div>
+						<img className="w-full h-full" src="/gallery_1_1.jpg" alt="image 1" />
+					</div>
+					<div className="photo-item min-w-[300px] relative w-2/6 h-80">
+						<div className="absolute opacity-0 h-full w-full p-5 bg-[#131a47cb]">
+							<div className="h-full w-full border-2 flex flex-col items-center justify-center">
+								<div className="h-12 w-12 rounded-full flex items-center justify-center bg-[#04ce78] hover:bg-[#1F5FFF]">
+									<FaPlus className="text-white font-regular text-xl" />
+								</div>
+								<h3 className="text-white text-xl font-bold my-3">Dental Cleaning</h3>
+								<p className="w-2/3 text-sm text-white text-center">
+									Thorough oral examinations to assess the overall health of teeth, gums, and surrounding structures.
+								</p>
+							</div>
+						</div>
+						<img className="w-full h-full" src="/gallery_1_2.jpg" alt="image 1" />
+					</div>
+					<div className="photo-item min-w-[300px] relative w-2/6 h-80">
+						<div className="absolute opacity-0 h-full w-full p-5 bg-[#131a47cb]">
+							<div className="h-full w-full border-2 flex flex-col items-center justify-center">
+								<div className="h-12 w-12 rounded-full flex items-center justify-center bg-[#04ce78] hover:bg-[#1F5FFF]">
+									<FaPlus className="text-white font-regular text-xl" />
+								</div>
+								<h3 className="text-white text-xl font-bold my-3">Dental Cleaning</h3>
+								<p className="w-2/3 text-sm text-white text-center">
+									Thorough oral examinations to assess the overall health of teeth, gums, and surrounding structures.
+								</p>
+							</div>
+						</div>
+						<img className="w-full h-full" src="/gallery_1_3.jpg" alt="image 1" />
+					</div>
+					<div className="photo-item min-w-[300px] relative w-2/6 h-80">
+						<div className="absolute opacity-0 h-full w-full p-5 bg-[#131a47cb]">
+							<div className="h-full w-full border-2 flex flex-col items-center justify-center">
+								<div className="h-12 w-12 rounded-full flex items-center justify-center bg-[#04ce78] hover:bg-[#1F5FFF]">
+									<FaPlus className="text-white font-regular text-xl" />
+								</div>
+								<h3 className="text-white text-xl font-bold my-3">Dental Cleaning</h3>
+								<p className="w-2/3 text-sm text-white text-center">
+									Thorough oral examinations to assess the overall health of teeth, gums, and surrounding structures.
+								</p>
+							</div>
+						</div>
+						<img className="w-full h-full" src="/gallery_1_4.jpg" alt="image 1" />
+					</div>
+					<div className="photo-item min-w-[300px] relative w-2/6 h-80">
+						<div className="absolute opacity-0 h-full w-full p-5 bg-[#131a47cb]">
+							<div className="h-full w-full border-2 flex flex-col items-center justify-center">
+								<div className="h-12 w-12 rounded-full flex items-center justify-center bg-[#04ce78] hover:bg-[#1F5FFF]">
+									<FaPlus className="text-white font-regular text-xl" />
+								</div>
+								<h3 className="text-white text-xl font-bold my-3">Dental Cleaning</h3>
+								<p className="w-2/3 text-sm text-white text-center">
+									Thorough oral examinations to assess the overall health of teeth, gums, and surrounding structures.
+								</p>
+							</div>
+						</div>
+						<img className="w-full h-full" src="/gallery_1_5.jpg" alt="image 1" />
+					</div>
+				</div>
+			</section>
+			<Team />
 		</main>
 	);
 };
