@@ -120,7 +120,7 @@ const Home = () => {
 					</form>
 				</div>
 			</section>
-			<section className="feature h-48 px-9 flex flex-wrap items-center justify-around border-b ">
+			<section className="feature h-48 mt-9  px-9 flex flex-wrap items-center justify-around border-b lg:h-48">
 				<Feature imgpath="/feature_box_1.svg" heading="Experienced Doctors" para="Our team of skilled doctors, nurses, and specialists" />
 				<Feature imgpath="/feature_box_2.svg" heading="Painless Treatment" para="Your health and well-being are our top priorities." />
 				<Feature imgpath="/feature_box_3.svg" heading="Top Dental Equipment" para="Our clinic is equipped with modern facilities" />
@@ -129,31 +129,31 @@ const Home = () => {
 			{/* <HomeServices /> */}
 			{/* <About /> */}
 			{/* <ChooseUs /> */}
-			<section className="w-full h-32 bg-[#1F5FFF]  flex items-center justify-center">
+			<section className="w-full h-48 bg-[#1F5FFF]  flex items-center justify-center lg:h-32">
 				<Marquee>
 					<div className="mr-32">
-						<img src="/brand_2_1.svg" alt="brand logo 1" />
+						<img src="/brand_2_1.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 					<div className="mr-32">
-						<img src="/brand_2_2.svg" alt="brand logo 1" />
+						<img src="/brand_2_2.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 					<div className="mr-32">
-						<img src="/brand_2_3.svg" alt="brand logo 1" />
+						<img src="/brand_2_3.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 					<div className="mr-32">
-						<img src="/brand_2_4.svg" alt="brand logo 1" />
+						<img src="/brand_2_4.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 					<div className="mr-32">
-						<img src="/brand_2_5.svg" alt="brand logo 1" />
+						<img src="/brand_2_5.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 					<div className="mr-32">
-						<img src="/brand_2_6.svg" alt="brand logo 1" />
+						<img src="/brand_2_6.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 					<div className="mr-32">
-						<img src="/brand_2_7.svg" alt="brand logo 1" />
+						<img src="/brand_2_7.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 					<div className="mr-32">
-						<img src="/brand_2_8.svg" alt="brand logo 1" />
+						<img src="/brand_2_8.svg" className="h-15 w-15 sm:h-17 sm:w-17" alt="brand logo 1" />
 					</div>
 				</Marquee>
 			</section>
