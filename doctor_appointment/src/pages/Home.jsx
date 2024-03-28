@@ -231,7 +231,7 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			{/* <Team /> */}
+			<Team />
 		</main>
 	);
 };
