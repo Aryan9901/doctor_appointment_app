@@ -2,11 +2,37 @@ import { FaPhoneAlt, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Button } from "../ui/button";
+import { SheetTrigger, Sheet } from "@/components/ui/sheet";
+import NavSheet from "./NavSheet";
+import { useEffect, useState } from "react";
+import HamburgerMenu from "./HamburgerMenu";
+// import NavSheet from "./NavSheet";
 
 const Navbar = () => {
+	const [isSmallerScreen, setIsSmallerScreen] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsSmallerScreen(window.innerWidth <= 640);
+		};
+
+		// Initial call to handleResize
+		handleResize();
+
+		// Event listener for window resize
+		window.addEventListener("resize", handleResize);
+
+		// Cleanup function to remove the event listener when component unmounts
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
 	return (
 		<header
-			className="w-[90%] mx-auto max-w-screen-2xl h-28 shadow-md absolute top-0 left-1/2 -translate-x-1/2 "
+			className={`w-[90%] mx-auto max-w-screen-2xl h-28 shadow-md absolute ${
+				isSmallerScreen ? "top-[-.4%]" : "top-[-.65%]"
+			} left-1/2 -translate-x-1/2`}
 			style={{ borderBottomRightRadius: "9px" }}
 		>
 			<div className="w-[20%] px-3 py-5 bg-black clip-custom absolute top-0 h-full left-0" style={{ borderBottomLeftRadius: "9px" }}>
@@ -44,30 +70,49 @@ const Navbar = () => {
 					</div>
 				</div>
 				<div className="header-bottom w-full p-2 h-[61%] flex items-center justify-between">
-					<nav className="flex items-center justify-evenly text-black w-3/5 font-semibold ">
-						<Button variant="link">
-							<a href="/">Home</a>
-						</Button>
-						<Button variant="link">
-							<a href="/">About Us</a>
-						</Button>
-						<Button variant="link">
-							<a href="/">Services</a>
-						</Button>
-						<Button variant="link">
-							<a href="/">Blogs</a>
-						</Button>
-						<Button variant="link">
-							<a href="/">Contacts</a>
-						</Button>
-					</nav>
-					<div className="w-2/5 h-full flex justify-end items-center gap-5 pr-5">
+					{!isSmallerScreen && (
+						<nav className="flex items-center justify-evenly text-black w-3/5 font-semibold ">
+							<Button variant="link">
+								<a href="/">Home</a>
+							</Button>
+							<Button variant="link">
+								<a href="/">About Us</a>
+							</Button>
+							<Button variant="link">
+								<a href="/">Services</a>
+							</Button>
+							<Button variant="link">
+								<a href="/">Blogs</a>
+							</Button>
+							<Button variant="link">
+								<a href="/">Contacts</a>
+							</Button>
+						</nav>
+					)}
+					<div className="w-2/5 h-full flex justify-end items-center gap-5 pr-5 ml-auto">
 						<Button className="bg-gradient-blue py-5 px-7 text-white rounded-3xl hover:-translate-y-1 duration-1000" variant="secondary">
 							Book Appointment
 						</Button>
-						<div className="h-10 w-10 border rounded-full flex justify-center items-center cursor-pointer hover:bg-[#04ce78] duration-500">
-							<RxHamburgerMenu className="text-red-600 text-xl font-bold" />
-						</div>
+						{!isSmallerScreen && (
+							<Sheet>
+								<SheetTrigger>
+									<div className="h-10 w-10 border rounded-full flex justify-center items-center cursor-pointer hover:bg-[#04ce78] duration-500">
+										<RxHamburgerMenu className="text-red-600 text-xl font-bold" />
+									</div>
+								</SheetTrigger>
+								<NavSheet />
+							</Sheet>
+						)}
+						{isSmallerScreen && (
+							<Sheet>
+								<SheetTrigger>
+									<div className="h-10 w-10 border rounded-full flex justify-center items-center cursor-pointer hover:bg-[#04ce78] duration-500">
+										<RxHamburgerMenu className="text-red-600 text-xl font-bold" />
+									</div>
+								</SheetTrigger>
+								<HamburgerMenu />
+							</Sheet>
+						)}
 					</div>
 				</div>
 			</div>
