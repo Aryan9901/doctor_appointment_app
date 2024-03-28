@@ -127,7 +127,7 @@ const Home = () => {
 				<Feature imgpath="/feature_box_4.svg" heading="24/7 Advance Care" para="We understand that every patient is unique" />
 			</section>
 			<HomeServices />
-			{/* <About /> */}
+			<About />
 			{/* <ChooseUs /> */}
 			<section className="w-full h-48 bg-[#1F5FFF]  flex items-center justify-center lg:h-32">
 				<Marquee>

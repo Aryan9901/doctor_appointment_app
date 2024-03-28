@@ -25,7 +25,7 @@ const HomeServices = () => {
 	}, []);
 
 	return (
-		<div className="w-full min-h-screen py-20 px-5">
+		<div className="w-full  py-20 px-5">
 			<h3 className="flex gap-5 text-[#05CE79] text-2xl items-center px-20">
 				<img src="/title_icon.svg" alt="title icon" />
 				Our Services
