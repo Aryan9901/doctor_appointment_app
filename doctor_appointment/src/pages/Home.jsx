@@ -6,30 +6,69 @@ import HomeServices from "../components/elements/HomeServices";
 import { Button } from "../components/ui/button";
 import Marquee from "react-fast-marquee";
 import Team from "../components/elements/Team";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+	const [isSmallerScreen, setIsSmallerScreen] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsSmallerScreen(window.innerWidth <= 640);
+		};
+
+		// Initial call to handleResize
+		handleResize();
+
+		// Event listeners for window resize and scroll
+		window.addEventListener("resize", handleResize);
+
+		// Cleanup function to remove the event listeners when component unmounts
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
 	return (
 		<main className="mt-[3.4%] w-full min-h-screen">
-			<section className="hero-section pt-2 w-full h-[150vh] bg-[url(/heroimg.png)] bg-cover  mx-auto" style={{ borderRadius: "2rem" }}>
-				<div className="h-[72%] w-1/2 mt-11">
-					<div className="h-full w-4/5 ml-auto flex items-start justify-center flex-col gap-5">
-						<div className="flex items-center justify-start gap-2 px-9 py-2 rounded-3xl bg-[#34353641] text-xl font-semibold text-white">
+			<section
+				className="hero-section pt-2 w-full h-[100vh] bg-[url(/heroimg.png)] bg-cover mx-auto sm:h-[150vh]"
+				style={{ borderRadius: "2rem" }}
+			>
+				<div className="h-[60%] w-full pl-12  mt-11 sm:h-[72%] sm:w-[70%]">
+					<div className="h-full w-full ml-auto flex items-center justify-center flex-col gap-5 sm:items-start">
+						<div className="flex items-center justify-center gap-2 px-9 py-2 rounded-3xl bg-[#34353641] text-xl font-semibold text-white sm:justify-start">
 							<p>Professional</p>
-							<div className="w-10 h-[1.2px] bg-[#04ce78]"></div>
+							<div className=" w-10 h-[1.2px] bg-[#04ce78]"></div>
 							<p>Doctor</p>
 						</div>
-						<h2 className="uppercase mt-1 text-6xl font-extrabold text-white leading-tight">
-							Best
-							<span className="px-2 border relative ml-4">
-								<div className="absolute -translate-x-1/2 -translate-y-1/2 top-0 left-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
-								<div className="absolute -translate-x-1/2 translate-y-1/2 bottom-0 left-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
-								<div className="absolute translate-x-1/2 -translate-y-1/2 top-0 right-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
-								<div className="absolute translate-x-1/2 translate-y-1/2 bottom-0 right-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
-								Dental
-							</span>{" "}
-							Care In Town
-						</h2>
-						<article className="text-white text-sm w-5/6">
+						{!isSmallerScreen && (
+							<h2 className="uppercase mt-1 text-6xl font-extrabold text-white leading-tight w-full text-center sm:text-left">
+								Best
+								<span className="px-2  border-2 relative ml-4 mr-4">
+									<div className="absolute -translate-x-1/2 -translate-y-1/2 top-0 left-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
+									<div className="absolute -translate-x-1/2 translate-y-1/2 bottom-0 left-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
+									<div className="absolute translate-x-1/2 -translate-y-1/2 top-0 right-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
+									<div className="absolute translate-x-1/2 translate-y-1/2 bottom-0 right-0 h-3 w-3 rounded-full bg-[#04ce78]"></div>
+									Dental
+								</span>
+								Care In Town
+							</h2>
+						)}
+						{isSmallerScreen && (
+							<h2 className="uppercase mt-1 text-6xl font-extrabold text-white leading-tight w-1/2 text-center">
+								Best
+								<span className="px-2  border-2 relative ml-4 mr-4">
+									<div className="absolute -translate-x-1/2 -translate-y-1/2 top-0 left-0 h-5 w-5 rounded-full bg-[#04ce78]"></div>
+									<div className="absolute -translate-x-1/2 translate-y-1/2 bottom-0 left-0 h-5 w-5 rounded-full bg-[#04ce78]"></div>
+									<div className="absolute translate-x-1/2 -translate-y-1/2 top-0 right-0 h-5 w-5 rounded-full bg-[#04ce78]"></div>
+									<div className="absolute translate-x-1/2 translate-y-1/2 bottom-0 right-0 h-5 w-5 rounded-full bg-[#04ce78]"></div>
+									Dental
+								</span>
+								<br />
+								Care In Town
+							</h2>
+						)}
+						<article className="text-white text-md w-[40%] text-center sm:text-sm sm:text-left sm:w-5/6">
 							A brief statement outlining the purpose and mission of the clinic. This can include the commitment to patient care,
 							community health.
 						</article>
@@ -85,9 +124,9 @@ const Home = () => {
 				<Feature imgpath="/feature_box_3.svg" heading="Top Dental Equipment" para="Our clinic is equipped with modern facilities" />
 				<Feature imgpath="/feature_box_4.svg" heading="24/7 Advance Care" para="We understand that every patient is unique" />
 			</section>
-			<HomeServices />
-			<About />
-			<ChooseUs />
+			{/* <HomeServices /> */}
+			{/* <About /> */}
+			{/* <ChooseUs /> */}
 			<section className="w-full h-32 bg-[#1F5FFF]  flex items-center justify-center">
 				<Marquee>
 					<div className="mr-32">
@@ -190,7 +229,7 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			<Team />
+			{/* <Team /> */}
 		</main>
 	);
 };
