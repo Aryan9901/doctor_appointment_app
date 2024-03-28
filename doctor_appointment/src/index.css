@@ -102,3 +102,14 @@
 .photo-item:hover > div {
 	opacity: 1;
 }
+
+@media screen and (max-width: 1000px) {
+	html {
+		font-size: 80%;
+	}
+}
+@media screen and (max-width: 830px) {
+	html {
+		font-size: 65%;
+	}
+}
