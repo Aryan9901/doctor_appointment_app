@@ -31,10 +31,10 @@ const Home = () => {
 	return (
 		<main className="mt-[3.4%] w-full min-h-screen">
 			<section
-				className="hero-section pt-2 w-full h-[100vh] bg-[url(/heroimg.png)] bg-cover mx-auto sm:h-[150vh]"
+				className="hero-section pt-2 w-full h-[110vh] bg-[url(/heroimg.png)] bg-cover mx-auto sm:h-[150vh]"
 				style={{ borderRadius: "2rem" }}
 			>
-				<div className="h-[60%] w-full pl-12  mt-11 sm:h-[72%] sm:w-[70%]">
+				<div className="h-[55%] w-full pl-12  mt-11 sm:h-[50%] md:h-[72%] sm:w-[70%]">
 					<div className="h-full w-full ml-auto flex items-center justify-center flex-col gap-5 sm:items-start">
 						<div className="flex items-center justify-center gap-2 px-9 py-2 rounded-3xl bg-[#34353641] text-xl font-semibold text-white sm:justify-start">
 							<p>Professional</p>
@@ -55,7 +55,7 @@ const Home = () => {
 							</h2>
 						)}
 						{isSmallerScreen && (
-							<h2 className="uppercase mt-1 text-6xl font-extrabold text-white leading-tight w-1/2 text-center">
+							<h2 className="uppercase mt-1 text-5xl font-extrabold text-white leading-tight w-[90%] text-center">
 								Best
 								<span className="px-2  border-2 relative ml-4 mr-4">
 									<div className="absolute -translate-x-1/2 -translate-y-1/2 top-0 left-0 h-5 w-5 rounded-full bg-[#04ce78]"></div>
@@ -68,7 +68,7 @@ const Home = () => {
 								Care In Town
 							</h2>
 						)}
-						<article className="text-white text-md w-[40%] text-center sm:text-sm sm:text-left sm:w-5/6">
+						<article className="text-white text-md w-[90%] text-center sm:text-sm sm:text-left sm:w-5/6">
 							A brief statement outlining the purpose and mission of the clinic. This can include the commitment to patient care,
 							community health.
 						</article>
@@ -82,8 +82,10 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
-				<div className="px-6 appointment-form mr-6 w-[87%] rounded-[3rem] h-44 box-shadow bg-white ml-auto flex justify-between items-center">
-					<h3 className="text-4xl text-[#000D44] font-bold pr-3 border-r-2 w-[25%] border-[#04ce78]">Book An Appointment</h3>
+				<div className="px-6 py-4 appointment-form mr-6 w-[90%] md:w-[90%] h-[40%] rounded-[3rem] box-shadow bg-white ml-auto flex flex-col justify-between items-center md:flex-row sm:h-[35%] md:h-48 md:py-0">
+					<h3 className=" text-3xl md:text-3xl 2xl:text-4xl xl:text-3xl lg:text-3xl mb-5  text-[#000D44] font-bold pr-3 md:border-r-2 lg:w-[25%] md:w-[22%] xl:w-[25%]  border-[#04ce78]">
+						Book An Appointment
+					</h3>
 					<form className="flex flex-wrap items-center justify-around w-[75%] gap-4">
 						<input
 							type="text"
