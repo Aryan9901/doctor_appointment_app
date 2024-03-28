@@ -128,7 +128,7 @@ const Home = () => {
 			</section>
 			<HomeServices />
 			<About />
-			{/* <ChooseUs /> */}
+			<ChooseUs />
 			<section className="w-full h-48 bg-[#1F5FFF]  flex items-center justify-center lg:h-32">
 				<Marquee>
 					<div className="mr-32">
